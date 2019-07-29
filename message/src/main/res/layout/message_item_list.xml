@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.woniu.core.widget.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="@dimen/d_70"
+                                       android:clickable="true"
+                                       app:ios="false"
+                                       app:leftSwipe="true"
+                                       app:swipeEnable="true">
+
+    <RelativeLayout
+            android:id="@+id/mRlListRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@drawable/bg_press_color">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mIvAvatar"
+                android:layout_width="@dimen/d_56"
+                android:layout_height="@dimen/d_56"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/d_15"
+                android:src="@mipmap/icon_default_head"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_56"
+                android:layout_marginLeft="@dimen/d_10"
+                android:paddingRight="@dimen/d_15"
+                android:paddingTop="@dimen/d_2"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/mIvAvatar">
+            <LinearLayout
+                    android:id="@+id/mLlName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                <TextView
+                        android:id="@+id/mTvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="---"
+                        android:textColor="#333"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/s_17"/>
+                <TextView
+                        android:id="@+id/mTvCreateTime"
+                        android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="上午10：30"
+                          android:textColor="#9A9A9A"
+                          android:textSize="@dimen/s_12"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/d_2"
+                    android:gravity="bottom">
+
+                <TextView
+                        android:id="@+id/mTvMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="----"
+                        android:textColor="#9A9A9A"
+                        android:textSize="@dimen/s_13"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textFontWeight="1"/>
+
+                <!--android:background="@drawable/shape_round"
+                        android:paddingTop="@dimen/d_2"
+                        android:paddingBottom="@dimen/d_2"
+                        android:paddingLeft="@dimen/d_6"
+                        android:paddingRight="@dimen/d_6"-->
+                <cn.jiguang.imui.view.RoundTextView
+                        android:id="@+id/mTvUnReadNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/d_20"
+                        app:cornerRadius="@dimen/d_20"
+                        app:backgroundColor="#FF4126"
+                        android:paddingLeft="@dimen/d_7"
+                        android:paddingRight="@dimen/d_7"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:text="0"
+                        android:textSize="@dimen/s_12"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View style="@style/View_line"
+              android:layout_alignParentBottom="true"
+              android:layout_marginLeft="@dimen/d_75"/>
+    </RelativeLayout>
+
+    <Button
+            android:id="@+id/mBtnDelete"
+            android:layout_width="@dimen/d_80"
+            android:layout_height="match_parent"
+            android:background="#FF6464"
+            android:text="删除"
+            android:textColor="@android:color/white"/>
+</com.woniu.core.widget.SwipeMenuLayout>

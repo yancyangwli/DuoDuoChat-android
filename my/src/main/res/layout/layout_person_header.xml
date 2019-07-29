@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CollapsingToolbarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentScrim="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:titleEnabled="false">
+
+    <!--头部滑动部分-->
+
+    <RelativeLayout
+            android:id="@+id/panel_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="200dp"
+            android:orientation="vertical">
+
+
+        <RelativeLayout
+                android:id="@+id/panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:background="@android:color/white"
+                android:paddingTop="10dp">
+
+            <RelativeLayout
+                    android:id="@+id/rl_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+
+                <TextView
+                        android:id="@+id/mTvUserPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_95"
+                        android:layout_marginBottom="4dp"
+                        android:text="用户账号：---"
+                        android:textColor="@color/my_color_333333"
+                        android:textSize="@dimen/s_14"/>
+
+                <LinearLayout
+                        android:id="@+id/mLlQrCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true">
+
+                    <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginRight="21dp"
+                            android:src="@mipmap/icon_saoma"/>
+
+                    <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/icon_arrow_right"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            style="@style/LinearLayout_mine_item"
+                            android:clickable="false">
+
+                        <ImageView
+                                android:layout_width="@dimen/d_22"
+                                android:layout_height="@dimen/d_22"
+                                android:src="@mipmap/icon_lianxi"/>
+
+                        <TextView
+                                android:id="@+id/mTvAge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="18dp"
+                                android:text="--"
+                                android:textColor="#989DB3"
+                                android:textSize="@dimen/s_14"/>
+
+                        <TextView
+                                android:id="@+id/mTvArea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="18dp"
+                                android:text="---"
+                                android:textColor="#989DB3"
+                                android:textSize="@dimen/s_14"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            style="@style/LinearLayout_mine_item"
+                            android:clickable="false">
+
+                        <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@mipmap/icon_bir"/>
+
+                        <TextView
+                                android:id="@+id/mTvBirth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="18dp"
+                                android:text="---"
+                                android:textColor="#989DB3"
+                                android:textSize="14dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            style="@style/LinearLayout_mine_item"
+                            android:clickable="false">
+
+                        <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@mipmap/icon_bi"/>
+
+                        <TextView
+                                android:id="@+id/mTvSignture"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="18dp"
+                                android:text="----"
+                                android:textColor="#989DB3"
+                                android:textSize="14dp"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                            android:id="@+id/mLlEditInfo"
+                            style="@style/LinearLayout_mine_item"
+                            android:layout_height="@dimen/d_40">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="编辑资料"
+                                android:textColor="#FF9FBF"
+                                android:textSize="12dp"/>
+
+                        <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@mipmap/icon_arrow_right"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mIvAvatar"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/icon_default_head"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/mIvAvatar"
+                android:gravity="center">
+
+            <ImageView
+                    android:id="@+id/mIvSex"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@mipmap/icon_male"
+                    android:layout_marginRight="@dimen/d_5"/>
+
+            <TextView
+                    android:id="@+id/mTvNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:textColor="@color/my_color_333333"
+                    android:textSize="@dimen/s_17"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CollapsingToolbarLayout>

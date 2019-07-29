@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_200">
+
+    <ImageView android:layout_width="match_parent"
+               android:layout_height="@dimen/d_170"
+               android:src="@mipmap/ic_red_envelope_head"
+               android:scaleType="fitXY"/>
+
+    <TextView
+            android:id="@+id/mTvEnvelopeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="恭喜发财"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/d_10"
+            android:textColor="#FFD8AB"
+            android:textSize="@dimen/s_17"/>
+
+    <com.dxjia.library.ImageTextButton
+            android:id="@+id/mBtnNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mTvEnvelopeName"
+            app:itb_icon="@mipmap/message_jifen"
+            app:itb_bg="#FE4F6C"
+            app:itb_icon_size="@dimen/d_26"
+            app:itb_icon_text_marggin="@dimen/d_8"
+            app:itb_text="480"
+            app:itb_text_size="36sp"
+            app:itb_padding="@dimen/d_0"
+            android:layout_marginTop="@dimen/d_10"
+            app:itb_text_color="#FFD8AB"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已存入积分余额去查看"
+            android:layout_marginTop="@dimen/d_2"
+            android:layout_below="@id/mBtnNumber"
+        android:layout_centerHorizontal="true"
+            android:textSize="@dimen/s_12"
+        android:textColor="@color/white"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mIvAvatar"
+            android:layout_width="@dimen/d_70"
+            android:layout_height="@dimen/d_70"
+            android:src="@mipmap/icon_default_head"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+</RelativeLayout>

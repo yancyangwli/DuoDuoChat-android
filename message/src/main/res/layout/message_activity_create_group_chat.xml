@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/message_titile_layout"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_20"
+            android:background="@mipmap/ic_shade_bg"/>
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <LinearLayout
+                    android:id="@+id/mLlSelectAvatarRoot"
+                    style="@style/message_LinearLayout_group_chat"
+                    android:layout_height="@dimen/d_70">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="选择群头像"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/mIvGroupAvatar"
+                        android:layout_width="@dimen/d_56"
+                        android:layout_height="@dimen/d_56"
+                        android:src="@mipmap/icon_default_group"/>
+                <ImageView
+                        android:layout_width="@dimen/d_9"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_arrow_right"
+                        android:layout_marginLeft="@dimen/d_15"/>
+
+            </LinearLayout>
+            <View style="@style/View_line"/>
+            <LinearLayout
+                    android:id="@+id/mLlGroupNameRoot"
+                    style="@style/message_LinearLayout_group_chat">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="群名"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+                <EditText
+                        android:id="@+id/mEtGroupName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:gravity="right|center_vertical"
+                        android:background="@null"
+                        android:hint="请输入群名"
+                        android:cursorVisible="false"
+                        android:maxLength="15"
+                        android:textCursorDrawable="@drawable/bg_cursor"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+
+
+            </LinearLayout>
+            <View style="@style/View_block"/>
+            <LinearLayout
+                    android:id="@+id/mLlAddAreaRoot"
+                    style="@style/message_LinearLayout_group_chat">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="添加地区"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+                <TextView
+                        android:id="@+id/mTvArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="请选择地区"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+
+                <ImageView
+                        style="@style/message_ImageView_arrow_right"/>
+
+            </LinearLayout>
+            <View style="@style/View_block"/>
+            <LinearLayout
+                    android:id="@+id/mLlGroupNoticeRoot"
+                    style="@style/message_LinearLayout_group_chat">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设置群公告"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+
+                <TextView
+                        android:id="@+id/mTvAnnouncement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/d_15"
+                        android:gravity="right"
+                        android:text=""
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/s_14"
+                        android:textColor="#333"/>
+
+                <ImageView
+                        style="@style/message_ImageView_arrow_right"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="bottom">
+
+                <Button
+                        android:id="@+id/mBtnCreate"
+                        style="@style/Button_theme"
+                        android:text="创建群聊"
+                        android:layout_marginBottom="@dimen/d_35"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

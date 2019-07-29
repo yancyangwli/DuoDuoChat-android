@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <include layout="@layout/message_titile_layout"/>
+
+        <!--<include layout="@layout/layout_search_head"/>-->
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/mRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srlEnableRefresh="false">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_100"
+                    android:paddingTop="@dimen/d_25"
+                    android:paddingBottom="@dimen/d_5"
+                    app:srlAccentColor="@android:color/black"/>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mRvMemberList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"/>
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srlAccentColor="#888"
+                    app:srlClassicsSpinnerStyle="Translate"
+                    app:srlDrawableProgress="@drawable/ic_progress_puzzle"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/mBtnDelete"
+            style="@style/Btn_shadow_bg"
+            android:text="确认删除"
+            android:textColor="#FF3560"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/d_36"/>
+
+    <LinearLayout
+            android:id="@+id/mLlBannedRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/d_36"
+            android:visibility="gone"
+            android:orientation="vertical">
+        <Button
+                style="@style/Btn_shadow_bg"
+                android:text="禁言七天"
+                android:textColor="#FF3560"/>
+
+        <Button
+                style="@style/Btn_shadow_bg"
+                android:text="永久禁言"
+                android:textColor="#FF3560"
+                android:layout_marginTop="@dimen/d_20"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.cosven.message">
+
+    <uses-permission android:name="android.permission-group.CAMERA"/>
+
+    <application>
+        <activity android:name=".activity.GroupMemberManageActivity">
+        </activity>
+        <activity
+                android:name=".activity.ChatActivity"
+                android:screenOrientation="portrait">
+
+            <!-- Schame -->
+            <intent-filter>
+                <data
+                        android:host="m.aliyun.com"
+                        android:scheme="arouter"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity> <!-- 发红包页面 -->
+        <activity
+                android:name=".activity.IntegratingRedActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activity.CreateGroupChatActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activity.AddGroupAnnouncementActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activity.RedEnvelopeActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activity.GroupInfoActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activity.GroupMemberActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activity.GroupAlbumActivity"
+                android:screenOrientation="portrait"/> <!-- 群系统消息 -->
+        <activity
+                android:name=".activity.GroupSystemInfoActivity"
+                android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

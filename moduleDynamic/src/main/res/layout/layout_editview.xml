@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_input"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/d_10"
+              android:gravity="center_vertical"
+              android:background="@color/white"
+              android:orientation="horizontal"
+              android:visibility="gone">
+
+    <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/d_40"
+            android:background="@drawable/bg_chat_edit"
+            android:layout_weight="1"
+            android:textSize="@dimen/s_14"
+            android:textColorHint="#999"
+            android:textColor="@color/color_53"
+            android:paddingLeft="@dimen/d_10"
+            android:paddingRight="@dimen/d_10"/>
+
+    <TextView
+            android:id="@+id/tv_send"
+            style="@style/TextView_ww_0"
+            android:text="发送"
+            android:textColor="#11DBFF"
+            android:textSize="@dimen/s_17"
+            android:layout_marginLeft="@dimen/d_17"
+            android:layout_marginRight="@dimen/d_9"/>
+</LinearLayout>

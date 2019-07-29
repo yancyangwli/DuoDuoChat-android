@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fec.yunmall.runAlone">
+<!--android:name属性——是用来设置所有activity属于哪个application的，默认是android.app.Application。-->
+    <application
+        android:name="com.cosven.socialim.contact.AloneMallApplication"
+        android:allowBackup="true"
+        android:label="我的页面"
+        android:supportsRtl="true"
+        android:theme="@style/contact_AppTheme">
+
+    </application>
+
+</manifest>

@@ -1,0 +1,183 @@
+apply from: "${rootProject.rootDir}/config.gradle"
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions' //启用扩展支持直接使用ID
+apply plugin: 'android-aspectjx'
+apply plugin: 'kotlin-android-extensions' //启用扩展支持直接使用ID
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'org.greenrobot.greendao'
+
+kapt {
+    generateStubs = true
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
+
+
+
+android {
+    project.ext.setDefaultConfig project
+    defaultConfig {
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+//    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //noinspection GradleCompatible
+    api "com.android.support:appcompat-v7:$rootProject.androidSupportSdkVersion"
+    api "com.android.support.constraint:constraint-layout:$rootProject.constraintLayout"
+    api "com.android.support:cardview-v7:$rootProject.androidSupportSdkVersion"
+    api "com.android.support:recyclerview-v7:$rootProject.androidSupportSdkVersion"
+    api "com.android.support:support-v4:$rootProject.androidSupportSdkVersion"
+    api "com.android.support:design:$rootProject.androidSupportSdkVersion"
+    api "com.android.support:support-annotations:$rootProject.annotations"
+    testImplementation "junit:junit:$rootProject.junit"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.testRunner"
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //json
+
+    //    api 'com.alibaba:fastjson:1.2.48'
+
+    //retrofit2
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:converter-scalars:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    //okhttp3
+    api 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    //rxjava
+    api 'io.reactivex.rxjava2:rxjava:2.1.16'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'com.noober.background:core:1.2.5'
+    api 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    // 刷新和轮播图
+    api 'com.ashokvarma.android:bottom-navigation-bar:2.0.5'
+    api 'cn.bingoogolapple:bga-banner:2.1.9'
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+
+    // 图片
+    api 'com.github.bumptech.glide:glide:4.5.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+
+    // recycle
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.31'
+
+    // 工具集合
+    api 'com.blankj:utilcode:1.22.1'
+    api 'com.qmuiteam:qmui:1.2.0'
+
+    // 二维码
+    api 'com.github.xuexiangjys:XQRCode:1.0.2'
+    api 'com.contrarywind:Android-PickerView:4.1.8'
+    // 软件更新
+    api 'com.azhon:appupdate:2.0.0'
+
+    //statusBarUtil
+    api 'com.jaeger.statusbarutil:library:1.5.1'
+
+    //    // 城市选择
+
+    //    api 'liji.library.dev:citypickerview:4.0.1'
+
+    // 图片选择
+    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+    // 日志拦截
+
+    //facebook网络调试及数据库查询工具
+
+    //    api 'com.facebook.stetho:stetho:1.3.1'
+
+    //    api 'com.facebook.stetho:stetho-okhttp3:1.3.1'
+    api 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+    // vlayout  多Item布局
+    api('com.alibaba.android:vlayout:1.2.8@aar') {
+        transitive = true
+    }
+
+    // 适配
+    api 'me.jessyan:autosize:1.1.2'
+    api "com.android.support:multidex:$rootProject.multidex"
+
+    // 路由
+    api "com.alibaba:arouter-api:$rootProject.arouterCompilerVersion"
+//    annotationProcessor "com.alibaba:arouter-compiler:$rootProject.annotationProcessor"
+    kapt "com.alibaba:arouter-compiler:$rootProject.annotationProcessor"
+
+    //kotlin
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlin_version"
+
+    // AOP + ANKO
+    api "org.aspectj:aspectjrt:$rootProject.aop"
+    api "org.jetbrains.anko:anko-coroutines:$rootProject.AnkoVersion"
+    api "org.jetbrains.anko:anko:$rootProject.AnkoVersion"
+    api "org.jetbrains.anko:anko-commons:$rootProject.AnkoVersion"
+    api "org.jetbrains.anko:anko-design:$rootProject.AnkoVersion"
+    api "com.orhanobut:logger:$rootProject.ext.loggerVersion"
+    api "com.android.support:cardview-v7:$rootProject.ext.androidSupportSdkVersion"
+    api 'de.hdodenhof:circleimageview:3.0.0'
+    api 'com.zhouyou:rxeasyhttp:2.1.5'
+    api 'com.github.zyyoona7:EasyPopup:1.1.2'
+    api 'cn.dxjia:imagetextbutton:1.0.0'
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    api 'com.makeramen:roundedimageview:2.3.0'
+    api 'org.greenrobot:greendao:3.2.2' // add library
+
+    //    api 'cn.jzvd:jiaozivideoplayer:7.0.3'
+    api files('src/main/lib/jxmpp-core-0.4.0-alpha1.jar')
+    api files('src/main/lib/jxmpp-util-cache-0.4.0-alpha1.jar')
+    api files('src/main/lib/smack-android-4.1.9.jar')
+    api files('src/main/lib/smack-android-extensions-4.1.9.jar')
+    api files('src/main/lib/smack-core-4.1.9.jar')
+    api files('src/main/lib/smack-experimental-4.1.9.jar')
+    api files('src/main/lib/smack-extensions-4.1.9.jar')
+    api files('src/main/lib/smack-im-4.1.9.jar')
+    api files('src/main/lib/smack-jingle-old-4.1.9.jar')
+    api files('src/main/lib/smack-sasl-provided-4.1.9.jar')
+    api files('src/main/lib/smack-tcp-4.1.9.jar')
+    api project(':immersionbar')
+
+    api files('libs/pinyin4j-2_5_0.jar')
+    api project(path: ':messagelist')
+
+    api 'me.zhanghai.android.materialprogressbar:library:1.4.2'
+
+
+//    provided files('libs/pinyin4j-2_5_0.jar')
+}
+
+greendao {
+    schemaVersion 6//数据库版本号
+    daoPackage 'com.woniu.core.dao'//设置DaoMaster、DaoSession、Dao包名
+    targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    //targetGenDirTest：设置生成单元测试目录
+    //generateTests：设置自动生成单元测试用例
+}

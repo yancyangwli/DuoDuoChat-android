@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_color_F2F3F8"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <include layout="@layout/my_title_layout"></include>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_20"
+            android:background="@mipmap/ic_shade_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/mClearImageFileTv"
+                style="@style/TextView_right_icon"
+                android:text="仅清除图片语音文件"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/my_color_C2CCDE"></View>
+
+        <TextView
+                android:id="@+id/mClearChatRecordTv"
+                style="@style/TextView_right_icon"
+                android:text="仅仅清除聊天记录"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/my_color_C2CCDE"></View>
+
+        <TextView
+                android:id="@+id/mClearAllTv"
+                style="@style/TextView_right_icon"
+                android:text="全部清除"/>
+    </LinearLayout>
+</LinearLayout>

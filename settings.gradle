@@ -1,0 +1,1 @@
+include ':app', ':p-core', ':message', ':my', ':contact', ':moduleDynamic', ':messagelist', ':chatinput', ':immersionbar'

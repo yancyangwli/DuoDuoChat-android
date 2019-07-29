@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="@dimen/d_190"
+              android:layout_height="@dimen/d_106"
+              android:paddingLeft="@dimen/d_50"
+              android:paddingRight="@dimen/d_50"
+              android:paddingTop="@dimen/d_20"
+              android:paddingBottom="@dimen/d_20"
+              android:gravity="center_vertical"
+              android:background="@mipmap/ic_bg_friend">
+
+    <TextView
+            android:id="@+id/mTvDelete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_40"
+            android:text="删除群成员"
+            android:textSize="@dimen/s_17"
+            android:textColor="#333333"
+            android:gravity="center"/>
+
+    <TextView
+            android:id="@+id/mTvBanned"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_40"
+            android:text="批量禁言"
+            android:gravity="center"
+            android:textSize="@dimen/s_17"
+            android:textColor="#333333"/>
+</LinearLayout>

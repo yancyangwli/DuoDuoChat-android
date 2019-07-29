@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_20"
+            android:background="@mipmap/ic_shade_bg"/>
+
+    <EditText
+            android:id="@+id/mEtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/d_100"
+            android:background="@drawable/bg_gray_corner"
+            android:layout_marginTop="@dimen/d_20"
+            android:layout_marginLeft="@dimen/d_15"
+            android:gravity="left"
+            android:padding="@dimen/d_10"
+            android:textColor="#333"
+            android:textSize="@dimen/s_14"
+            android:hint="动态内容(120个字以内)..."
+            android:maxLength="120"
+            android:layout_marginRight="@dimen/d_15"/>
+
+    <cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout
+            android:id="@+id/snpl_moment_add_photos"
+            style="@style/WrapWrap"
+            android:layout_margin="10dp"
+            app:bga_snpl_deleteDrawable="@mipmap/bga_pp_ic_delete"
+            app:bga_snpl_deleteDrawableOverlapQuarter="false"
+            app:bga_snpl_editable="true"
+            app:bga_snpl_itemCornerRadius="0dp"
+            app:bga_snpl_itemSpanCount="3"
+            app:bga_snpl_itemWhiteSpacing="4dp"
+            app:bga_snpl_itemWidth="0dp"
+            app:bga_snpl_maxItemCount="9"
+            app:bga_snpl_otherWhiteSpacing="100dp"
+            app:bga_snpl_placeholderDrawable="@mipmap/bga_pp_ic_holder_light"
+            app:bga_snpl_plusDrawable="@mipmap/bga_pp_ic_plus"
+            app:bga_snpl_plusEnable="true"
+            app:bga_snpl_sortable="true" />
+</LinearLayout>

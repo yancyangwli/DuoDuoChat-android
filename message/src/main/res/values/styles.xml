@@ -1,0 +1,121 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="message_AppBaseTheme" parent="QMUI.Compat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textAllCaps">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/message_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/message_colorPrimaryDark</item>
+        <item name="colorAccent">@color/message_color_11DBFF</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+
+    <style name="message_AppTheme" parent="message_AppBaseTheme"></style>
+
+
+    <style name="message_AppThemes">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:dividerHeight">0.5dp</item>
+        <item name="android:divider">@color/message_colorDivision</item>
+        <item name="android:background">@color/message_colorDivision</item>
+    </style>
+
+    <style name="message_PopAnim" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/right_top_in</item>
+        <item name="android:windowExitAnimation">@anim/right_top_out</item>
+    </style>
+
+    <style name="message_TextImageButton_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="itb_bg">@color/white</item>
+        <item name="itb_text_color">#333</item>
+        <item name="itb_text_size">@dimen/s_17</item>
+        <item name="itb_icon_size">@dimen/d_24</item>
+        <item name="itb_icon_text_marggin">@dimen/d_10</item>
+        <item name="itb_padding">@dimen/d_10</item>
+    </style>
+
+
+
+
+    <style name="message_picture_style" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--标题栏背景色-->
+        <item name="colorPrimary">@color/bar_grey</item>
+        <!--状态栏背景色-->
+        <item name="colorPrimaryDark">@color/bar_grey</item>
+        <!--是否改变图片列表界面状态栏字体颜色为黑色-->
+        <item name="picture.statusFontColor">false</item>
+        <!--返回键图标-->
+        <item name="picture.leftBack.icon">@drawable/picture_back</item>
+        <!--标题下拉箭头-->
+        <item name="picture.arrow_down.icon">@drawable/arrow_down</item>
+        <!--标题上拉箭头-->
+        <item name="picture.arrow_up.icon">@drawable/arrow_up</item>
+        <!--标题文字颜色-->
+        <item name="picture.title.textColor">@color/white</item>
+        <!--标题栏右边文字-->
+        <item name="picture.right.textColor">@color/white</item>
+        <!--图片列表勾选样式-->
+        <item name="picture.checked.style">@drawable/ic_check</item>
+        <!--开启图片列表勾选数字模式-->
+        <item name="picture.style.checkNumMode">false</item>
+        <!--选择图片样式0/9-->
+        <item name="picture.style.numComplete">false</item>
+        <!--图片列表底部背景色-->
+        <item name="picture.bottom.bg">@color/color_fa</item>
+        <!--图片列表预览文字颜色-->
+        <item name="picture.preview.textColor">@color/tab_color_true</item>
+        <!--图片列表已完成文字颜色-->
+        <item name="picture.complete.textColor">@color/tab_color_true</item>
+        <!--图片已选数量圆点背景色-->
+        <item name="picture.num.style">@drawable/num_oval</item>
+        <!--预览界面标题文字颜色-->
+        <item name="picture.ac_preview.title.textColor">@color/white</item>
+        <!--预览界面已完成文字颜色-->
+        <item name="picture.ac_preview.complete.textColor">@color/tab_color_true</item>
+        <!--预览界面标题栏背景色-->
+        <item name="picture.ac_preview.title.bg">@color/bar_grey</item>
+        <!--预览界面底部背景色-->
+        <item name="picture.ac_preview.bottom.bg">@color/bar_grey_90</item>
+        <!--预览界面返回箭头-->
+        <item name="picture.preview.leftBack.icon">@drawable/picture_back</item>
+        <!--是否改变预览界面状态栏字体颜色为黑色-->
+        <!--<item_contact_list name="picture.preview.statusFontColor">false</item_contact_list>-->
+        <!--裁剪页面标题背景色-->
+        <item name="picture.crop.toolbar.bg">@color/bar_grey</item>
+        <!--裁剪页面状态栏颜色-->
+        <item name="picture.crop.status.color">@color/bar_grey</item>
+        <!--裁剪页面标题文字颜色-->
+        <item name="picture.crop.title.color">@color/white</item>
+        <!--相册文件夹列表选中图标-->
+        <item name="picture.folder_checked_dot">@drawable/orange_oval</item>
+    </style>
+
+    <style name="message_LinearLayout_group_chat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/d_60</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/d_15</item>
+        <item name="android:paddingRight">@dimen/d_15</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/bg_press_color</item>
+    </style>
+
+
+    <style name="message_ImageView_arrow_right">
+        <item name="android:layout_width">@dimen/d_9</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@mipmap/ic_arrow_right</item>
+        <item name="android:layout_marginLeft">@dimen/d_15</item>
+    </style>
+
+
+</resources>

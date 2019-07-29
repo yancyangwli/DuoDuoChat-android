@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <include layout="@layout/message_titile_layout"/>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mRefreshLayout"
+                app:srlEnableRefresh="false">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mRvGroupAblumList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"/>
+
+            <include layout="@layout/load_footer"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+
+    <Button
+            android:id="@+id/mBtnUpImage"
+            style="@style/Btn_shadow_bg"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/d_35"
+            android:text="上传图片"
+            android:textColor="#11DBFE"/>
+
+    <Button
+            android:id="@+id/mBtnDelete"
+            style="@style/Btn_shadow_bg"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/d_35"
+            android:text="删除"
+            android:visibility="gone"
+            android:textColor="#FF315C"/>
+
+</RelativeLayout>

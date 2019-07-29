@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.cosven.socialim.contact">
+
+    <uses-permission android:name="android.permission-group.CAMERA"/>
+
+    <application>
+        <activity android:name=".activity.QRScanActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AddActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SearchActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.BlackActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.GroupActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.NewFriendActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AddFriendAcitivty" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.FriendRequestsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SelectContactActivity" android:screenOrientation="portrait"/>
+    </application>
+
+
+</manifest>

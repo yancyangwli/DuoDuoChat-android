@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_80"
+                android:paddingLeft="@dimen/d_15">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mIvIcon"
+            android:layout_width="@dimen/d_48"
+            android:layout_height="@dimen/d_48"
+            android:src="@mipmap/icon_default_head"
+            android:layout_centerVertical="true"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_48"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/mIvIcon"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginRight="@dimen/d_15">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+            <TextView
+                    android:id="@+id/mNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/s_17"
+                    android:textColor="#333"
+                    android:text="李子豪"/>
+
+            <TextView
+                    android:id="@+id/mNumberTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/s_17"
+                    android:textColor="#333"
+                    android:text="160积分"/>
+
+        </LinearLayout>
+        <TextView
+                android:id="@+id/mTimeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/s_12"
+                android:textColor="#9A9A9A"
+                android:text="10:30"/>
+    </LinearLayout>
+
+    <View style="@style/View_line"
+          android:layout_alignParentBottom="true"
+          android:background="#DADADA"
+          android:layout_marginLeft="@dimen/d_63"/>
+</RelativeLayout>

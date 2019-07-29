@@ -1,0 +1,73 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.30'
+
+    ext {
+        //是否单独运行
+        isRunAlone = false
+        //消息模块
+        messageMoudle = false
+        //联系人模块
+        contactMoudle = false
+        //动态模块
+        dynamicMoudle = false
+        //个人中心模块
+        moduleUserCenter = false
+
+        ext.compileSdkVersion = 28
+        ext.buildToolsVersion = '28.0.3'
+        ext.minSdkVersion = 19
+        ext.targetSdkVersion = 28
+        ext.versionCode = 1
+        ext.versionName = "1.0.0"
+        ext.applicationId = "com.cosven.socialim"
+        ext.androidSupportSdkVersion = '28.0.0'
+        ext.constraintLayout = '1.1.3'
+        ext.annotations = '24.0.0'
+        ext.junit = '4.12'
+        ext.testRunner = '1.0.2'
+        ext.testEspressoCore = '3.0.2'
+
+        ext.multidex = '1.0.2'
+        ext.arouterApiVersion = '1.5.0'
+        ext.arouterCompilerVersion = '1.2.2'
+        ext.annotationProcessor = '1.1.4'
+        ext.butterknifeVersion = '8.4.0'
+        ext.glideVersion = '4.5.0'
+        ext.retrofitVersion = '2.3.0'
+        ext.aop = '1.8.9'
+
+        AnkoVersion = "0.10.5"
+        loggerVersion = "2.1.1"
+    }
+
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.0'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add plugin
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+
+}

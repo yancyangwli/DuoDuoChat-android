@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_color_F2F3F8">
+
+
+    <!--图片-->
+    <ImageView
+        android:id="@+id/parallax"
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:layout_marginTop="-300dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/image_weibo_home_2"
+        app:layout_collapseMode="parallax" />
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnablePreviewInEditMode="false">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingBottom="5dp"
+            app:srlAccentColor="@android:color/white" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp">
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/icon_right" />
+                    </RelativeLayout>
+
+
+                <!--头部部分-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--通用头部滑动部分--><include layout="@layout/my_head" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/my_color_F2F3F8"></View>
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="10dp">
+
+            <Button xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/btn_login"
+                android:layout_width="345dp"
+                android:layout_height="46dp"
+                android:layout_centerHorizontal="true"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="加入黑名单"
+                android:textColor="@color/my_color_FF315C"
+                android:textSize="16dp"
+                app:corners_radius="23dp"
+                app:gradient_angle="0"
+                app:gradient_centerColor="#fff"
+                app:gradient_endColor="#fff"
+                app:gradient_startColor="#fff"
+                app:ripple_color="@color/my_color_F2F3F8"
+                app:ripple_enable="true"
+                app:shape="rectangle"
+                tools:ignore="MissingPrefix" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="10dp">
+
+            <Button xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="345dp"
+                android:layout_height="46dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="添加好友"
+                android:textColor="@color/my_color_11DBFF"
+                android:textSize="16dp"
+                app:corners_radius="23dp"
+                app:gradient_angle="0"
+                app:gradient_centerColor="#fff"
+                app:gradient_endColor="#fff"
+                app:gradient_startColor="#fff"
+                app:ripple_color="@color/my_color_F2F3F8"
+                app:ripple_enable="true"
+                app:shape="rectangle"
+                tools:ignore="MissingPrefix" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <FrameLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="550dp">
+
+            <ImageView
+                    android:id="@+id/mIvPackBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="484dp"
+                    android:src="@mipmap/ic_big_red_pack"
+                    android:layout_marginLeft="@dimen/d_20"
+                    android:layout_marginRight="@dimen/d_20"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:id="@+id/mLlUserInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_70"
+                        android:layout_marginRight="@dimen/d_70"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_centerInParent="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/mIvAvatar"
+                            android:layout_width="@dimen/d_28"
+                            android:layout_height="@dimen/d_28"
+                            android:src="@mipmap/icon_default_head"/>
+                    <TextView
+                            android:id="@+id/mIvNickname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="--------"
+                            android:textSize="@dimen/s_17"
+                            android:textColor="#FFFFD8AB"
+                            android:layout_marginLeft="@dimen/d_10"/>
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/mTvWishes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mLlUserInfo"
+                        android:text="恭喜发财"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/d_50"
+                        android:textColor="#FFFFD8AB"
+                        android:textSize="@dimen/s_23"/>
+
+                <ImageView
+                        android:id="@+id/mIvRedOpen"
+                        android:layout_width="@dimen/d_125"
+                        android:layout_height="@dimen/d_125"
+                        android:src="@mipmap/ic_red_open"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/d_75"
+                        android:padding="@dimen/d_5"/>
+
+                <ImageView
+                        android:id="@+id/mIvDelete"
+                        android:layout_width="@dimen/d_50"
+                        android:layout_height="@dimen/d_50"
+                        android:src="@mipmap/ic_delete_pack"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"/>
+
+                <TextView
+                        android:id="@+id/mLookDetailTv"
+                        android:text="查看领红包详情>"
+                        android:textColor="#FFFFD8AB"
+                        android:visibility="gone"
+                        android:layout_marginTop="420dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</LinearLayout>

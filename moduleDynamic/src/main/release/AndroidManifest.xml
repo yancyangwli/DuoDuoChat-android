@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.chat.moduledynamic">
+
+    <application>
+        <activity android:name=".ui.activity.PublishDynamicActivity">
+        </activity>
+        <activity android:name=".ui.activity.BaseDynameicActivity">
+        </activity>
+        <activity
+                android:name=".ui.activity.DynamicActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+                android:name=".ui.activity.ReleaseDynamicActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.DynamicDetailActivity"
+                android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

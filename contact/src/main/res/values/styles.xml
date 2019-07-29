@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="contact_AppBaseTheme" parent="QMUI.Compat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textAllCaps">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/contact_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/contact_colorPrimaryDark</item>
+        <item name="colorAccent">@color/contact_color_11DBFF</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+
+    <style name="contact_AppTheme" parent="contact_AppBaseTheme"></style>
+
+
+    <style name="contact_AppThemes">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:dividerHeight">0.5dp</item>
+        <item name="android:divider">@color/contact_colorDivision</item>
+        <item name="android:background">@color/contact_colorDivision</item>
+    </style>
+
+
+</resources>

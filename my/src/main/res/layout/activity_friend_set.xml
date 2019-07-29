@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              tools:ignore="ResourceName">
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+            android:id="@+id/qmui_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:qmui_topbar_title_text_size="@dimen/s_17"
+            app:qmui_topbar_title_color="@color/my_color_030303"/>
+
+    <LinearLayout
+            android:id="@+id/mLlNicknameRoot"
+            style="@style/LinearLayout_mine_item"
+            android:layout_height="@dimen/d_55">
+        <TextView
+                style="@style/TextView_mine_item"
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/d_0"
+                android:text="设置好友昵称"/>
+
+        <EditText
+                android:id="@+id/mEtNickname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请设置好友昵称"
+                android:gravity="end|center_vertical"
+                android:textSize="@dimen/s_14"
+                android:textColor="#333"
+                android:cursorVisible="false"
+                android:textCursorDrawable="@drawable/bg_cursor"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_marginLeft="@dimen/d_10"/>
+
+        <ImageView style="@style/ImageView_arrow_right"/>
+    </LinearLayout>
+
+    <View style="@style/View_line"/>
+
+    <LinearLayout
+            android:id="@+id/mLlRecommend"
+            style="@style/LinearLayout_mine_item"
+            android:layout_height="@dimen/d_50">
+
+        <TextView
+                style="@style/TextView_mine_item"
+                android:text="推荐该联系人"
+                android:layout_marginLeft="@dimen/d_0"/>
+
+        <ImageView style="@style/ImageView_arrow_right"/>
+    </LinearLayout>
+
+    <View style="@style/View_line"/>
+
+    <LinearLayout
+            style="@style/LinearLayout_mine_item"
+            android:layout_height="@dimen/d_50">
+
+        <TextView
+                style="@style/TextView_mine_item"
+                android:text="屏蔽该用户"
+                android:layout_marginLeft="@dimen/d_0"/>
+
+        <android.support.v7.widget.SwitchCompat
+                android:id="@+id/mBlockFriendSwitch"
+                android:layout_width="66dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+        <Button
+                android:id="@+id/mBtnDeleteFriend"
+                style="@style/Btn_shadow_bg"
+                android:text="删除好友"
+                android:layout_marginBottom="@dimen/d_35"/>
+    </LinearLayout>
+
+</LinearLayout>

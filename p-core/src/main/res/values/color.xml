@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义密码输入框-->
+    <color name="colorGray">#D1D5DA</color>
+    <color name="colorBlack">#474747</color>
+    <color name="msg_center_content_div_color">#E5E5E5</color>
+    <color name="swip_card_time">#666666</color>
+    <color name="sign_estext">#F5F5F5</color>
+    <color name="app_gray_button">#999999</color>
+
+    <color name="color_theme">#11DBFF</color>
+
+    <color name="color_block">#F4F4F4</color>
+
+    <color name="color_333">#333</color>
+    <color name="color_11DBFF">#11DBFF</color>
+    <color name="color_9A9A9A">#9A9A9A</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_F2F3F8">#F2F3F8</color>
+    <color name="color_030303">#030303</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_989DB3">#989DB3</color>
+    <color name="color_FF9FBF">#FF9FBF</color> <!--通用layout背景色-->
+    <color name="colorDivision">#33aaaaaa</color>
+    <color name="color_8A8A8A">#8A8A8A</color>
+    <color name="color_FF2B76">#FF2B76</color>
+    <color name="color_C2CCDE">#C2CCDE</color>
+    <color name="color_DBDBDB">#DBDBDB</color>
+
+    <color name="color_f9f9f9">#f9f9f9</color>
+    
+    <color name="color_sex_male">#FF5EAAFF</color>
+    <color name="color_sex_female">#FFFF3984</color>
+
+</resources>

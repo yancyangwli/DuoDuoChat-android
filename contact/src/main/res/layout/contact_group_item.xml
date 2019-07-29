@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/d_65"
+              android:background="@drawable/bg_press_color"
+              android:clickable="true"
+              android:gravity="center_vertical"
+              android:paddingLeft="@dimen/d_15"
+              android:paddingRight="@dimen/d_15"
+              android:orientation="horizontal">
+
+
+    <CheckBox
+            android:id="@+id/mCbSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_checkbox"
+            android:layout_marginRight="@dimen/d_10"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mIvAvatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/icon_default_group"/>
+
+    <TextView
+            android:id="@+id/mTvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="师范大学学习交流群"
+            android:textColor="@color/contact_color_333333"
+            android:textSize="17dp"/>
+
+
+</LinearLayout>

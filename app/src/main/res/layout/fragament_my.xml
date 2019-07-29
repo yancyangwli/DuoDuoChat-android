@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/color_F2F3F8">
+
+    <!--图片-->
+    <ImageView
+            android:id="@+id/parallax"
+            android:layout_width="match_parent"
+            android:layout_height="670dp"
+            android:layout_marginTop="-300dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/image_weibo_home_2"
+            app:layout_collapseMode="parallax"/>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnablePreviewInEditMode="false">
+
+        <include layout="@layout/load_header"/>
+
+        <android.support.v4.widget.NestedScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                <include layout="@layout/layout_person_header"/>
+
+                <View style="@style/View_block"></View>
+
+                <!--我的动态-->
+                <LinearLayout
+                        android:id="@+id/mLlDynamicRoot"
+                        android:layout_height="@dimen/d_40"
+                        style="@style/LinearLayout_mine_item">
+
+                    <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@mipmap/icon_dynamic"/>
+
+                    <TextView
+                            style="@style/TextView_mine_item"
+                            android:text="我的动态"/>
+
+                    <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@mipmap/icon_arrow_right"/>
+
+                </LinearLayout>
+
+                <!--我的积分-->
+                <LinearLayout
+                        android:id="@+id/mLlIntegralRoot"
+                        android:layout_height="@dimen/d_40"
+                        style="@style/LinearLayout_mine_item">
+
+                    <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@mipmap/icon_jifen"/>
+
+                    <TextView
+                            style="@style/TextView_mine_item"
+                            android:text="我的积分"/>
+
+                    <TextView
+                            android:id="@+id/mTvIngegral"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="9dp"
+                            android:text="---"
+                            android:textColor="@color/color_FF2B76"
+                            android:textSize="14dp"/>
+
+                    <ImageView
+                            android:layout_width="@dimen/d_12"
+                            android:layout_height="@dimen/d_12"
+                            android:src="@mipmap/icon_arrow_right"/>
+                </LinearLayout>
+
+                <!--我的收藏-->
+                <LinearLayout
+                        android:id="@+id/mRlCollectionRoot"
+                        style="@style/LinearLayout_mine_item"
+                        android:layout_height="@dimen/d_40">
+
+                    <ImageView
+                            android:id="@+id/iv_shoucang"
+                            android:layout_width="@dimen/d_22"
+                            android:layout_height="@dimen/d_22"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/icon_collection"/>
+
+                    <TextView
+                            style="@style/TextView_mine_item"
+                            android:text="我的收藏"/>
+
+                    <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@mipmap/icon_arrow_right"/>
+                </LinearLayout>
+
+                <!--设置-->
+                <LinearLayout
+                        android:id="@+id/rl_setting"
+                        style="@style/LinearLayout_mine_item"
+                        android:layout_height="@dimen/d_40"
+                        android:layout_marginBottom="@dimen/d_20">
+
+                    <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@mipmap/icon_setting"/>
+
+                    <TextView
+                            style="@style/TextView_mine_item"
+                            android:text="设置"/>
+
+                    <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@mipmap/icon_arrow_right"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <View
+            android:id="@+id/mViewChangeBg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_200"/>
+</FrameLayout>

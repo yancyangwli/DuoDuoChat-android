@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/mLlVoiceRecordRoot"
+              android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingTop="@dimen/d_10"
+              android:paddingBottom="@dimen/d_10"
+              android:paddingLeft="@dimen/d_60"
+              android:paddingRight="@dimen/d_20"
+              android:gravity="right|center_vertical"
+              android:background="@drawable/shape_round_send">
+
+    <TextView
+            android:id="@+id/mTvVoiceDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/s_17"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/d_10"
+            android:text="0s"/>
+
+    <ImageView
+            android:layout_width="@dimen/d_30"
+            android:layout_height="@dimen/d_30"
+            android:src="@mipmap/ic_voice_white"/>
+
+</LinearLayout>

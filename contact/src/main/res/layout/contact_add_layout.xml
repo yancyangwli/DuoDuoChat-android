@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/contact_titile_layout"/>
+
+    <!--搜索-->
+    <LinearLayout
+            android:id="@+id/mLlSearchRoot"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_circle_corner_gray">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:drawableLeft="@mipmap/icon_search"
+                android:drawablePadding="10dp"
+                android:hint="搜索账号/手机号/群号"
+                android:textColorHint="@color/contact_color_9A9A9A"
+                android:textSize="17dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp">
+
+            <CheckBox
+                    android:id="@+id/mUserGb"
+                    android:text="找人"
+                    android:button="@null"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:background="@drawable/selector_blue_gray"
+                    android:layout_width="100dp"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp">
+
+            <CheckBox
+                    android:id="@+id/mGroupCb"
+                    android:text="找群"
+                    android:button="@null"
+                    android:textColor="@color/white"
+                    android:background="@drawable/selector_blue_gray"
+                    android:textSize="14sp"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/qr_sao"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/d_15"
+            android:layout_marginRight="@dimen/d_15"
+            android:layout_marginTop="@dimen/d_10"
+            android:background="@drawable/contact_shape_constace_add">
+
+
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/contact_saoyisao"
+                android:layout_marginLeft="@dimen/d_20"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="扫一扫添加用户/群"
+                android:textColor="@color/contact_color_989DB3"
+                android:textSize="17dp"/>
+
+        <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/ic_arrow_right"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/mLlCreateGroupChat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_56"
+            android:gravity="center_vertical"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="@dimen/d_15"
+            android:layout_marginRight="@dimen/d_15"
+            android:background="@drawable/contact_shape_constace_add">
+
+
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/contact_add"
+                android:layout_marginLeft="@dimen/d_20"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="新建群聊"
+                android:textColor="@color/contact_color_989DB3"
+                android:textSize="17dp"/>
+
+        <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/ic_arrow_right"/>
+    </LinearLayout>
+
+
+</LinearLayout>

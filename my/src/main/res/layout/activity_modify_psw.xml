@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+            android:id="@+id/qmui_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_70"
+            android:paddingTop="@dimen/d_20"
+            app:qmui_topbar_title_text_size="@dimen/s_17"
+            app:qmui_topbar_title_color="@color/my_color_030303"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_15"
+                    android:background="@mipmap/ic_shade_bg"/>
+
+            <LinearLayout
+                    style="@style/LinearLayout_style_1"
+                    android:layout_marginTop="@dimen/d_25">
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/icon_mima"/>
+
+                <EditText
+                        android:id="@+id/mEtOriginPsw"
+                        style="@style/EditText_style_1"
+                        android:paddingLeft="@dimen/d_10"
+                        android:inputType="textPassword"
+                        android:digits="@string/digits"
+                        android:maxLength="20"
+                        android:hint="请输入原密码"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/LinearLayout_style_1"
+                    android:layout_marginTop="@dimen/d_15">
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/icon_mima"/>
+
+                <EditText
+                        android:id="@+id/mEtNewPsw"
+                        style="@style/EditText_style_1"
+                        android:paddingLeft="@dimen/d_10"
+                        android:hint="请输入新密码"
+                        android:inputType="textPassword"
+                        android:digits="@string/digits"
+                        android:maxLength="20"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    style="@style/LinearLayout_style_1"
+                    android:layout_marginTop="@dimen/d_15">
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/icon_mima"/>
+
+                <EditText
+                        android:id="@+id/mEtConfrimPsw"
+                        style="@style/EditText_style_1"
+                        android:paddingLeft="@dimen/d_10"
+                        android:inputType="textPassword"
+                        android:digits="@string/digits"
+                        android:maxLength="20"
+                        android:hint="请确认新密码"/>
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/mBtnConfirm"
+                    style="@style/Button_theme"
+                    android:layout_marginTop="@dimen/d_50"
+                    android:text="确认修改"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

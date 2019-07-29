@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/d_70"
+              android:clickable="true"
+              android:gravity="center_vertical"
+              android:background="@drawable/bg_press_color"
+              android:paddingLeft="@dimen/d_15"
+              android:paddingRight="@dimen/d_15">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mIvGroupAvatar"
+            android:layout_width="@dimen/d_56"
+            android:layout_height="@dimen/d_56"
+            android:src="@mipmap/ic_launcher_round"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_56"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/d_10">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="漫威电影交流群"
+                android:textColor="#333333"
+                android:textSize="@dimen/s_17"/>
+
+        <TextView
+                android:id="@+id/mTvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="好友妈蛋邀你进入群聊"
+                android:textColor="#9A9A9A"
+                android:textSize="@dimen/s_14"
+                android:layout_marginTop="@dimen/d_8"/>
+    </LinearLayout>
+
+    <cn.jiguang.imui.view.RoundTextView
+            android:id="@+id/mTvStatus"
+            android:layout_width="@dimen/d_70"
+            android:layout_height="@dimen/d_30"
+            app:cornerRadius="@dimen/d_15"
+            app:backgroundColor="#11DBFF"
+            android:text="同意"
+            android:gravity="center"
+            android:textSize="@dimen/s_17"
+            android:textColor="@color/white"/>
+</LinearLayout>

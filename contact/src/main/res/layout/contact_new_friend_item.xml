@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_70" xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:clickable="true"
+                android:paddingLeft="@dimen/d_15"
+                android:paddingRight="@dimen/d_15"
+                android:background="@drawable/bg_press_color">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mIvAvatar"
+            android:layout_width="@dimen/d_56"
+            android:layout_height="@dimen/d_56"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_default_head"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/mIvAvatar"
+            android:orientation="vertical">
+
+
+        <TextView
+                android:id="@+id/mTvNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="张雪呀"
+                android:textColor="@color/contact_color_333333"
+                android:textSize="17dp"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+            <cn.jiguang.imui.view.RoundTextView
+                    android:id="@+id/mTvInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/d_20"
+                    android:text="男"
+                    android:drawableLeft="@mipmap/ic_male_white"
+                    android:drawablePadding="@dimen/d_6"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:paddingLeft="@dimen/d_8"
+                    android:paddingRight="@dimen/d_8"
+                    app:cornerRadius="@dimen/d_4"
+                    app:backgroundColor="@color/color_sex_male"
+                    android:textSize="@dimen/s_12"/>
+
+
+            <TextView
+                    android:id="@+id/mTvRemarks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="请求添加好友"
+                    android:textColor="@color/contact_color_9A9A9A"
+                    android:textSize="14dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/mBtnStatus"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_corner"
+            android:text="同意"
+            android:textColor="#fff"
+            android:textSize="@dimen/s_17"/>
+
+
+</RelativeLayout>

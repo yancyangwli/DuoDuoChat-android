@@ -1,0 +1,26 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cosven.my">
+
+    <uses-permission android:name="android.permission-group.CAMERA" />
+
+    <application>
+
+        <activity android:name="com.cosven.socialim.ui.activity.me.ClearCacheActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.cosven.socialim.ui.activity.me.FeedbackActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.cosven.socialim.ui.activity.me.FriendSetActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.cosven.socialim.ui.activity.me.QrCodeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.cosven.socialim.ui.activity.me.SettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.cosven.socialim.ui.activity.me.MineIntegralActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".runAlone.activity.UserInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".runAlone.activity.ModifyPswActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".runAlone.activity.EditInfoActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".runAlone.activity.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".runAlone.activity.RegisteredActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".runAlone.activity.ChangPsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".runAlone.activity.MyCollectionActivity" android:screenOrientation="portrait"/>
+    </application>
+
+
+</manifest>

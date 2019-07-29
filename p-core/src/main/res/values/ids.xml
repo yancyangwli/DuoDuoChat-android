@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="qmuidemo" type="id"/>
+    <item name="main_container" type="id"/>
+
+    <item name="empty_button" type="id"/>
+
+    <item name="topbar_right_about_button" type="id"/>
+    <item name="goback" type="id"/>
+    <item name="gobacks" type="id"/>
+    <item name="topbar_right_change_button" type="id"/>
+
+    <item name="layout_for_test" type="id"/>
+    <item name="click_time" type="id"/>
+
+    <item name="click_three_line" type="id"/>
+
+    <item name="click_right_text" type="id"/>
+</resources>

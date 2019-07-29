@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/message_titile_layout"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableRefresh="false">
+
+        <!--<com.scwang.smartrefresh.layout.header.ClassicsHeader-->
+                <!--android:id="@+id/header"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/d_100"-->
+                <!--android:paddingTop="@dimen/d_25"-->
+                <!--android:paddingBottom="@dimen/d_5"-->
+                <!--app:srlAccentColor="@android:color/black"/>-->
+
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:transcriptMode="alwaysScroll"/>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlAccentColor="#888"
+                app:srlClassicsSpinnerStyle="Translate"
+                app:srlDrawableProgress="@drawable/ic_progress_puzzle"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

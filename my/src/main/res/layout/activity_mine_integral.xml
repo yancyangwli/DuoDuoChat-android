@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+android:background="@color/white">
+
+    <include
+            layout="@layout/my_title_layout"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_119"
+                android:background="@mipmap/icon_integral_bg">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerInParent="true">
+
+                <ImageView
+                        android:layout_width="@dimen/d_30"
+                        android:layout_height="@dimen/d_30"
+                        android:src="@mipmap/icon_integral"/>
+
+                <TextView
+                        android:id="@+id/mIntegralTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="36sp"
+                        android:layout_marginLeft="@dimen/d_10"
+                        android:textColor="#BF9468"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/d_100"
+                android:layout_marginLeft="@dimen/d_15"
+                app:cardElevation="@dimen/d_5"
+                app:cardCornerRadius="@dimen/d_15"
+                android:layout_marginBottom="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_15">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/d_20"
+                        android:text="积分明细"
+                        android:layout_marginLeft="@dimen/d_15"
+                        android:layout_marginTop="@dimen/d_20"
+                        android:textSize="@dimen/s_16"
+                        android:textColor="#2C2C2C"/>
+
+                <com.flyco.tablayout.CommonTabLayout
+                        android:id="@+id/mTabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/d_40"
+                        android:layout_marginTop="@dimen/d_8"
+                        app:tl_indicator_color="#49A7FF"
+                        app:tl_iconVisible="false"
+                        app:tl_indicator_height="@dimen/d_2"
+                        app:tl_indicator_width="@dimen/d_55"
+                        app:tl_textsize="@dimen/s_12"
+                        app:tl_textSelectColor="#49A7FF"
+                        app:tl_textUnselectColor="#5F5F5F"/>
+
+                <FrameLayout
+                        android:id="@+id/fl_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</LinearLayout>

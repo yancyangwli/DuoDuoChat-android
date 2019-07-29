@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName"
+    tools:showIn="@layout/activity_edit_info">
+    <LinearLayout
+            android:id="@+id/mLlAvatarRoot"
+            style="@style/LinearLayout_mine_item"
+            android:layout_height="@dimen/d_80">
+        <TextView
+                style="@style/TextView_mine_item"
+                android:layout_marginLeft="@dimen/d_0"
+                android:text="头像"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mIvAvatar"
+                android:layout_width="@dimen/d_56"
+                android:layout_height="@dimen/d_56"
+                android:layout_marginRight="@dimen/d_10"
+                android:src="@mipmap/icon_default_head"/>
+
+        <ImageView style="@style/ImageView_arrow_right"/>
+    </LinearLayout>
+    <View style="@style/View_line"/>
+    <LinearLayout
+            android:id="@+id/mLlNicknameRoot"
+            style="@style/LinearLayout_mine_item"
+            android:layout_height="@dimen/d_55">
+        <TextView
+                style="@style/TextView_mine_item"
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/d_0"
+                android:text="昵称"/>
+
+        <EditText
+                android:id="@+id/mEtNickname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请设置您的昵称"
+                android:gravity="end|center_vertical"
+                android:textSize="@dimen/s_14"
+                android:textColor="#333"
+                android:cursorVisible="false"
+                android:textCursorDrawable="@drawable/bg_cursor"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_marginLeft="@dimen/d_10"/>
+
+        <ImageView style="@style/ImageView_arrow_right"/>
+    </LinearLayout>
+    <View style="@style/View_line"/>
+    <LinearLayout
+            style="@style/LinearLayout_mine_item"
+            android:layout_height="@dimen/d_55">
+        <TextView
+                style="@style/TextView_mine_item"
+                android:layout_marginLeft="@dimen/d_0"
+                android:text="账号"/>
+
+        <TextView
+                android:id="@+id/mTvUserPhone"
+                style="@style/TextView_mine_item"
+                android:layout_width="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="@dimen/d_0"
+                android:text="---"/>
+
+
+    </LinearLayout>
+    <View style="@style/View_block"/>
+    <LinearLayout
+            android:id="@+id/mLlSex"
+            style="@style/LinearLayout_mine_item"
+            android:layout_height="@dimen/d_55">
+        <ImageView
+                android:layout_width="@dimen/d_22"
+                android:layout_height="@dimen/d_22"
+                android:src="@mipmap/icon_sexs"
+                android:layout_marginRight="@dimen/d_10"/>
+        <TextView
+                style="@style/TextView_mine_item"
+                android:layout_marginLeft="@dimen/d_0"
+                android:text="性别"/>
+
+        <TextView
+                android:id="@+id/mTvSex"
+                style="@style/TextView_mine_item"
+                android:layout_width="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="@dimen/d_0"
+                android:hint="请选择"/>
+
+
+    </LinearLayout>
+    <View style="@style/View_line"/>
+    <LinearLayout
+            android:id="@+id/mLlBir"
+            style="@style/LinearLayout_mine_item"
+            android:layout_height="@dimen/d_55">
+        <ImageView
+                android:layout_width="@dimen/d_22"
+                android:layout_height="@dimen/d_22"
+                android:src="@mipmap/icon_bir"
+                android:layout_marginRight="@dimen/d_10"/>
+        <TextView
+                style="@style/TextView_mine_item"
+                android:layout_marginLeft="@dimen/d_0"
+                android:text="生日"/>
+
+        <TextView
+                android:id="@+id/mTvBirth"
+                style="@style/TextView_mine_item"
+                android:layout_width="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="@dimen/d_0"
+                android:hint="请选择"/>
+
+
+    </LinearLayout>
+    <View style="@style/View_line"/>
+    <LinearLayout
+            android:id="@+id/mLlArea"
+            style="@style/LinearLayout_mine_item"
+            android:layout_height="@dimen/d_55">
+        <ImageView
+                android:layout_width="@dimen/d_22"
+                android:layout_height="@dimen/d_22"
+                android:src="@mipmap/icon_location"
+                android:layout_marginRight="@dimen/d_10"/>
+        <TextView
+                style="@style/TextView_mine_item"
+                android:layout_marginLeft="@dimen/d_0"
+                android:text="地区"/>
+
+        <TextView
+                android:id="@+id/mTvArea"
+                style="@style/TextView_mine_item"
+                android:layout_width="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="@dimen/d_0"
+                android:hint="请选择"/>
+
+
+    </LinearLayout>
+    <View style="@style/View_line"/>
+    <LinearLayout
+            android:id="@+id/mLlSignature"
+            style="@style/LinearLayout_mine_item"
+            android:layout_height="@dimen/d_55">
+
+        <ImageView
+                android:layout_width="@dimen/d_22"
+                android:layout_height="@dimen/d_22"
+                android:src="@mipmap/icon_bi"
+                android:layout_marginRight="@dimen/d_10"/>
+
+        <TextView
+                style="@style/TextView_mine_item"
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/d_0"
+                android:text="个性签名"/>
+
+        <EditText
+                android:id="@+id/mEtSignature"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请设置您的个性签名"
+                android:gravity="end|center_vertical"
+                android:textSize="@dimen/s_14"
+                android:textCursorDrawable="@drawable/bg_cursor"
+                android:textColor="#333"
+                android:maxLength="20"
+                android:cursorVisible="false"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_marginLeft="@dimen/d_10"/>
+
+        <ImageView style="@style/ImageView_arrow_right"/>
+    </LinearLayout>
+</merge>

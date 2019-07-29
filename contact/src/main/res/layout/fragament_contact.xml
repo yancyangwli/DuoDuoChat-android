@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:orientation="vertical">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/fake_status_bar"
+            android:orientation="vertical">
+
+        <include
+                layout="@layout/titile_layout_fragment"/>
+
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:background="#fff"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/d_70"
+            android:gravity="center_vertical">
+        <com.cosven.socialim.contact.view.HintSideBar
+                android:id="@+id/hintSideBar"
+                android:layout_width="wrap_content"
+                android:layout_height="500dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

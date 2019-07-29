@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fec.yunmall.runAlone">
+<!--android:name属性——是用来设置所有activity属于哪个application的，默认是android.app.Application。-->
+    <application
+        android:name="com.cosven.my.runAlone.AloneMallApplication"
+        android:allowBackup="true"
+        android:label="我的页面"
+        android:supportsRtl="true"
+        android:theme="@style/my_AppTheme">
+        <activity android:name="com.cosven.my.runAlone.activity.MyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

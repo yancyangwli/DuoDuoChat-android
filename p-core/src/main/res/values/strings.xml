@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Pcore</string>
+
+    <string name="elec_signa_tip">请在框内签名</string>
+    <string name="elec_signa_tip_under">请把签名签在编码上，确保您签名的成功率</string>
+    <string name="sign_tips">请顾客用手指在此签名</string>
+    <string name="resign_tips">请重新签名,笔迹需划过水印区域</string>
+    <string name="stroke_limit">请正确签名</string>
+
+    <string name="waiting">请稍后</string>
+    <string name="digits">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    
+    <string name="phone_input_hint">请输入手机号</string>
+    <string name="phone_err">手机号码错误!</string>
+    
+    <string name="code_input_hint">请输入验证码</string>
+    <string name="code_length_err">验证码必须为6位</string>
+    
+    <string name="psw_input_hint">请设置密码</string>
+    <string name="psw_length_err">密码长度至少6位</string>
+    <string name="psw_err">密码必须是数字加字母的组合</string>
+    
+    <string name="confirm_psw_input_hint">请输入确认密码</string>
+    
+    <string name="confrim_psw_no_equals">确认密码不一致</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="my_colorPrimary">#008577</color>
+    <color name="my_colorPrimaryDark">#00574B</color>
+    <color name="my_colorAccent">#D81B60</color>
+
+
+    <color name="my_color_11DBFF">#11DBFF</color>
+    <color name="my_color_9A9A9A">#9A9A9A</color>
+    <color name="my_color_000000">#000000</color>
+    <color name="my_color_F2F3F8">#F2F3F8</color>
+    <color name="my_color_030303">#030303</color>
+    <color name="my_color_333333">#333333</color>
+    <color name="my_color_989DB3">#989DB3</color>
+    <color name="my_color_FF9FBF">#FF9FBF</color> <!--通用layout背景色-->
+    <color name="my_colorDivision">#33aaaaaa</color>
+    <color name="my_color_8A8A8A">#8A8A8A</color>
+    <color name="my_color_FF2B76">#FF2B76</color>
+    <color name="my_color_C2CCDE">#C2CCDE</color>
+    <color name="my_color_FF315C">#FF315C</color>
+
+</resources>

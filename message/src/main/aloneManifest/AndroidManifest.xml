@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fec.yunmall.runAlone">
+    <!--android:name属性——是用来设置所有activity属于哪个application的，默认是android.app.Application。-->
+    <application
+        android:name="com.cosven.message.AloneMsgApplication"
+        android:allowBackup="true"
+        android:label="聊天页面"
+        android:supportsRtl="true"
+        android:theme="@style/message_AppTheme">
+        <activity android:name="com.cosven.message.activity.MsgActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

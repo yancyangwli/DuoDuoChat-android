@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+            android:id="@+id/qmui_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_70"
+            android:paddingTop="@dimen/d_20"
+            app:qmui_topbar_title_text_size="@dimen/s_17"
+            app:qmui_topbar_title_color="#030303"/>
+    <View style="@style/View_shade"/>
+
+
+    <EditText
+            android:id="@+id/mEtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/d_120"
+            android:padding="@dimen/d_15"
+            android:textColor="#333333"
+            android:gravity="left"
+            android:textSize="@dimen/s_17"
+            android:maxLength="150"
+            android:textCursorDrawable="@drawable/bg_cursor"
+            android:background="@color/white"
+            android:hint="请输入公告内容(150字以内)"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+        <Button
+                android:id="@+id/mBtnConfirm"
+                style="@style/Button_theme"
+                android:layout_marginBottom="@dimen/d_35"
+                android:text="确 认"/>
+    </LinearLayout>
+</LinearLayout>

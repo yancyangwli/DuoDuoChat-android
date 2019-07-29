@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+    <include layout="@layout/message_titile_layout"/>
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_20"
+                    android:background="@mipmap/ic_shade_bg"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mRvAvatarList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:paddingLeft="@dimen/d_15"
+                    android:paddingRight="@dimen/d_15"/>
+            <LinearLayout
+                    android:id="@+id/mMoreMemberLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_50"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                <TextView
+                        android:id="@+id/mTvLookGroupMember"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="查看全部群聊人员(60人)"
+                        android:gravity="center"
+                        android:textColor="#11DBFF"
+                        android:textSize="@dimen/s_12"/>
+
+                <ImageView
+                        android:layout_width="@dimen/d_6"
+                        android:layout_height="@dimen/d_12"
+                        android:src="@mipmap/ic_arrow_right"
+                        android:layout_marginLeft="@dimen/d_6"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/mAlbumLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_15"
+                    android:layout_marginRight="@dimen/d_15"
+                    android:orientation="horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/mIvImage1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/d_106"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@color/color_f9f9f9"
+                        app:riv_corner_radius="@dimen/d_10"
+                        android:layout_marginRight="@dimen/d_6"/>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/mIvImage2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/d_106"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@color/color_f9f9f9"
+                        app:riv_corner_radius="@dimen/d_10"
+                        android:layout_marginRight="@dimen/d_6"/>
+
+                <FrameLayout
+                        android:id="@+id/mFlLookAlbumRoot"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/d_106"
+                        android:layout_weight="1">
+                    <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/mIvImage3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/d_106"
+                            android:src="@color/color_f9f9f9"
+                            android:scaleType="centerCrop"
+                            app:riv_corner_radius="@dimen/d_10"/>
+
+                    <cn.jiguang.imui.view.RoundTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:backgroundColor="@color/color_f9f9f9"
+                            app:cornerRadius="@dimen/d_10"
+                            android:text="全部相册"
+                            android:gravity="center"
+                            android:textSize="@dimen/s_17"
+                            android:textColor="@color/white"/>
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--群头像-->
+            <LinearLayout
+                    android:id="@+id/mLlSelectAvatarRoot"
+                    style="@style/message_LinearLayout_group_chat"
+                    android:layout_height="@dimen/d_70">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="群头像"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/mIvGroupAvatar"
+                        android:layout_width="@dimen/d_56"
+                        android:layout_height="@dimen/d_56"
+                        android:src="@mipmap/ic_launcher"/>
+                <ImageView
+                        android:id="@+id/mGroupAvatarIv"
+                        android:layout_width="@dimen/d_9"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_arrow_right"
+                        android:layout_marginLeft="@dimen/d_15"/>
+
+            </LinearLayout>
+
+            <!--群名称-->
+            <LinearLayout
+                    android:id="@+id/mLlGroupNameRoot"
+                    style="@style/message_LinearLayout_group_chat">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="群聊名称"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+                <TextView
+                        android:id="@+id/mEtGroupName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="会飞的猪"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:maxLength="15"
+                        android:drawablePadding="10dp"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+
+
+            </LinearLayout>
+
+            <!--群昵称-->
+            <LinearLayout
+                    android:id="@+id/mLlGroupNickNameRoot"
+                    style="@style/message_LinearLayout_group_chat">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="我的群昵称"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+                <TextView
+                        android:id="@+id/mEtGroupNickName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="会飞的猪"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:maxLength="15"
+                        android:drawableRight="@mipmap/ic_arrow_right"
+                        android:drawablePadding="10dp"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+
+
+            </LinearLayout>
+
+            <View style="@style/View_block"/>
+            <!--群公告-->
+            <LinearLayout
+                    android:id="@+id/mLlGroupNoticeRoot"
+                    style="@style/message_LinearLayout_group_chat">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="群公告"
+                        android:textSize="@dimen/s_17"
+                        android:textColor="#333"/>
+                <ImageView
+                        style="@style/message_ImageView_arrow_right"/>
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/mGroupIntroTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/d_15"
+                    android:paddingRight="@dimen/d_15"
+                    android:textSize="@dimen/s_14"
+                    android:paddingBottom="@dimen/d_15"
+                    android:textColor="#9A9A9A"
+                    android:text="欢迎来到本群\n\n群公告  群公告  群公告"/>
+            <View style="@style/View_block"/>
+
+            <LinearLayout
+                    android:id="@+id/mBottomLl"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <!--置顶聊天-->
+                <LinearLayout
+                        style="@style/message_LinearLayout_group_chat">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="置顶聊天"
+                            android:textSize="@dimen/s_17"
+                            android:textColor="#333"/>
+                    <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/mStickySwitch"
+                            android:layout_width="66dp"
+                            android:layout_height="30dp"/>
+                </LinearLayout>
+                <!--消息免打扰-->
+                <LinearLayout
+                        style="@style/message_LinearLayout_group_chat">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="消息免打扰"
+                            android:textSize="@dimen/s_17"
+                            android:textColor="#333"/>
+                    <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/mNoDisturbingSwitch"
+                            android:layout_width="66dp"
+                            android:layout_height="30dp"/>
+                </LinearLayout>
+                <!--群二维码-->
+                <LinearLayout
+                        android:id="@+id/mLlGroupQRCode"
+                        style="@style/message_LinearLayout_group_chat">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="群二维码"
+                            android:textSize="@dimen/s_17"
+                            android:textColor="#333"/>
+                    <ImageView
+                            style="@style/message_ImageView_arrow_right"/>
+
+                </LinearLayout>
+                <!--搜索历史信息-->
+                <LinearLayout
+                        style="@style/message_LinearLayout_group_chat">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="搜索历史信息"
+                            android:textSize="@dimen/s_17"
+                            android:textColor="#333"/>
+                    <ImageView style="@style/message_ImageView_arrow_right"/>
+
+                </LinearLayout>
+
+                <!--全员禁言-->
+                <LinearLayout
+                        android:id="@+id/mTotalSilenceLl"
+                        android:visibility="gone"
+                        style="@style/message_LinearLayout_group_chat">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="全员禁言"
+                            android:textSize="@dimen/s_17"
+                            android:textColor="#333"/>
+                    <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/mTotalSilenceSwitch"
+                            android:layout_width="66dp"
+                            android:layout_height="30dp"/>
+                </LinearLayout>
+
+                <!--群成员上线-->
+                <LinearLayout
+                        android:visibility="gone"
+                        style="@style/message_LinearLayout_group_chat">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="群成员上线(500)"
+                            android:textSize="@dimen/s_17"
+                            android:textColor="#333"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="增加上线"
+                            android:singleLine="true"
+                            android:background="@null"
+                            android:cursorVisible="false"
+                            android:maxLength="15"
+                            android:enabled="false"
+                            android:textSize="@dimen/s_17"
+                            android:textColor="#9A9A9A"/>
+
+                    <ImageView style="@style/message_ImageView_arrow_right"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/mClearChatRecordBtn"
+                    style="@style/Btn_shadow_bg"
+                    android:layout_margin="@dimen/d_15"
+                    android:textColor="#333333"
+                    android:text="清空聊天记录"/>
+
+            <Button
+                    android:id="@+id/mDismissGroupBtn"
+                    style="@style/Btn_shadow_bg"
+                    android:layout_marginBottom="@dimen/d_26"
+                    android:textColor="#FF315C"
+                    android:text="解散群"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

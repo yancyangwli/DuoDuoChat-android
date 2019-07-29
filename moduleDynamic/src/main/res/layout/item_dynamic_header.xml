@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="@dimen/d_300"
+>
+
+    <View
+            android:id="@+id/bg_view_stub"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginTop="-300dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_bg_test"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_20"
+            android:background="#f8f8f8"
+            android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_75"
+            android:layout_alignParentBottom="true">
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/d_75"
+                android:layout_height="@dimen/d_75"
+                android:src="@mipmap/icon_default_head"
+                android:layout_marginLeft="@dimen/d_15"/>
+
+        <TextView
+                android:id="@+id/mTvHeaderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="沉睡中的你"
+                android:layout_toRightOf="@id/iv_avatar"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/d_8"
+                android:textSize="@dimen/s_17"/>
+    </RelativeLayout>
+</RelativeLayout>

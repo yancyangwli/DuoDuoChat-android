@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/d_40"
+              android:orientation="horizontal"
+              android:gravity="center_vertical">
+
+    <TextView
+            android:id="@+id/mActionTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#5F5F5F"
+            android:textSize="@dimen/s_14"
+            android:text="抢红包获取"
+            android:layout_marginLeft="@dimen/d_15"/>
+
+    <TextView
+            android:id="@+id/mNumberTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+0"
+            android:textColor="#5F5F5F"
+            android:textSize="@dimen/s_14"/>
+    
+    <ImageView
+            android:layout_width="@dimen/d_16"
+            android:layout_height="@dimen/d_16"
+            android:layout_marginRight="@dimen/d_15"
+            android:layout_marginLeft="@dimen/d_10"
+            android:src="@mipmap/icon_income"/>
+</LinearLayout>

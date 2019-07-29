@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/rl_body_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+                android:id="@+id/parallax"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="-300dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_bg_test"/>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srlEnablePreviewInEditMode="false">
+
+            <!--<com.scwang.smartrefresh.layout.header.ClassicsHeader-->
+            <!--android:id="@+id/header"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/d_100"-->
+            <!--android:paddingTop="@dimen/d_25"-->
+            <!--android:paddingBottom="@dimen/d_5"-->
+            <!--app:srlAccentColor="@android:color/white"/>-->
+            <include layout="@layout/load_header"/>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"/>
+
+            <include layout="@layout/load_footer"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:background="@drawable/base_title_shell"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_70"
+                android:paddingTop="@dimen/d_20">
+            <android.support.v7.widget.ButtonBarLayout
+                    android:id="@+id/buttonBarLayout"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/toolbar_avatar"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="@dimen/d_10"
+                        android:layout_marginRight="@dimen/d_10"
+                        android:src="@mipmap/icon_default_head"/>
+                <TextView
+                        android:id="@+id/title"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:text="------"/>
+            </android.support.v7.widget.ButtonBarLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_change_bg"-->
+        <!--android:layout_width="@dimen/d_22"-->
+        <!--android:layout_height="@dimen/d_70"-->
+        <!--android:paddingTop="@dimen/d_20"-->
+        <!--android:src="@mipmap/ic_change_bg"-->
+        <!--android:layout_marginLeft="@dimen/d_15"/>-->
+        <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/d_45"
+                android:layout_height="@dimen/d_50"
+                android:padding="@dimen/d_13"
+                android:layout_marginTop="@dimen/d_20"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/d_5"
+                android:src="@mipmap/ic_arrow_left_white"/>
+
+        <ImageView
+                android:id="@+id/iv_release"
+                android:layout_width="@dimen/d_22"
+                android:layout_height="@dimen/d_70"
+                android:paddingTop="@dimen/d_20"
+                android:src="@mipmap/ic_add_white"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/d_15"/>
+        <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_editview"
+                android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+</LinearLayout>

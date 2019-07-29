@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_70"
+            android:background="@color/white"
+            android:paddingTop="@dimen/d_20"
+            app:contentInsetStart="0dp">
+
+        <ImageView
+                android:id="@+id/mToolbarBack"
+                android:layout_width="@dimen/d_40"
+                android:layout_height="match_parent"
+                android:padding="@dimen/d_15"
+                android:src="@mipmap/icon_arrow_left"/>
+
+        <TextView
+                android:id="@+id/mToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="好友申请"
+                android:textStyle="bold"
+                android:textColor="#030303"
+                android:textSize="@dimen/s_17"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <include layout="@layout/layout_shadow_header"/>
+
+    <RelativeLayout
+            android:id="@+id/mRlUserInfoRoot"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_80"
+            android:paddingLeft="@dimen/d_15"
+            android:paddingRight="@dimen/d_15"
+            android:clickable="true"
+            android:background="@drawable/bg_press_color">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mIvAvatar"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_default_head"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/mIvAvatar"
+                android:orientation="vertical">
+
+
+            <TextView
+                    android:id="@+id/mTvNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="张雪呀"
+                    android:textColor="@color/contact_color_333333"
+                    android:textSize="17dp"/>
+
+
+            <LinearLayout
+                    android:id="@+id/mInfoLl"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1">
+
+                <cn.jiguang.imui.view.RoundTextView
+                        android:id="@+id/mTvInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/d_20"
+                        android:text="男"
+                        android:drawableLeft="@mipmap/ic_male_white"
+                        android:drawablePadding="@dimen/d_6"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:paddingLeft="@dimen/d_8"
+                        android:paddingRight="@dimen/d_8"
+                        app:cornerRadius="@dimen/d_4"
+                        app:backgroundColor="@color/color_sex_male"
+                        android:textSize="@dimen/s_12"/>
+                <TextView
+                        android:id="@+id/mTvArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text=""
+                        android:textColor="@color/contact_color_9A9A9A"
+                        android:textSize="14dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="9dp"
+                android:layout_height="17dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_right"/>
+
+    </RelativeLayout>
+    <View style="@style/View_line"/>
+
+    <LinearLayout
+            android:id="@+id/mRemarksLl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_50"
+            android:paddingLeft="@dimen/d_15"
+            android:paddingRight="@dimen/d_15"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="备注信息"
+                android:textColor="@color/contact_color_333333"
+                android:textSize="@dimen/s_17"/>
+
+        <EditText
+                android:id="@+id/mEtNote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="false"
+                android:background="@null"
+                android:hint="填写"
+                android:textCursorDrawable="@drawable/bg_cursor"
+                android:gravity="end|center_vertical"
+                android:textColor="@color/contact_color_333333"
+                android:textSize="@dimen/s_17"/>
+    </LinearLayout>
+    <View style="@style/View_line"/>
+
+    <LinearLayout
+            android:id="@+id/mLlNumberRoot"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_50"
+            android:paddingLeft="@dimen/d_15"
+            android:paddingRight="@dimen/d_15"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账号"
+                android:textColor="@color/contact_color_333333"
+                android:textSize="@dimen/s_17"/>
+
+        <TextView
+                android:id="@+id/mTvNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="-----"
+                android:maxLength="15"
+                android:gravity="end|center_vertical"
+                android:textColor="@color/contact_color_333333"
+                android:textSize="@dimen/s_17"/>
+    </LinearLayout>
+    <View style="@style/View_line"/>
+
+
+    <LinearLayout
+            android:id="@+id/mLlFriendApply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/d_20"
+            android:orientation="vertical">
+        <Button
+                android:id="@+id/mBtnAgree"
+                style="@style/Button_theme"
+                android:text="同意"/>
+
+        <Button
+                android:id="@+id/mBtnRefuse"
+                style="@style/Btn_shadow_bg"
+                android:layout_marginTop="@dimen/d_20"
+                android:text="拒绝"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:tools="http://schemas.android.com/tools"
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       tools:showIn="@layout/activity_login">
+
+
+    <!--手机号码-->
+    <LinearLayout
+            style="@style/LinearLayout_style_login"
+            android:layout_marginTop="@dimen/d_25">
+
+        <ImageView
+                style="@style/ImageView_style_login"
+                android:src="@mipmap/icon_phone"/>
+
+        <EditText
+                android:id="@+id/mEtPhone"
+                style="@style/EditText_style_login"
+                android:inputType="number"
+                android:maxLength="11"
+                android:hint="请输入手机号"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/mLlCodeRoot"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_60"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/d_13">
+        <LinearLayout
+                style="@style/LinearLayout_style_login"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_weight="1">
+
+            <ImageView
+                    style="@style/ImageView_style_login"
+                    android:src="@mipmap/icon_yzm"/>
+
+            <EditText
+                    android:id="@+id/mEtCode"
+                    style="@style/EditText_style_login"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:hint="请输入短信验证码"/>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/mTvCode"
+                android:layout_width="match_parent"
+                android:layout_weight="1.8"
+                android:layout_height="@dimen/d_46"
+                android:gravity="center"
+                android:elevation="@dimen/d_3"
+                android:background="@drawable/shape_corner_whites"
+                android:text="获取验证码"
+                android:textSize="@dimen/s_17"
+                android:layout_marginRight="@dimen/d_20"
+                android:textColor="@color/color_11DBFF"/>
+    </LinearLayout>
+
+    <!--密码-->
+    <LinearLayout
+            android:id="@+id/mLlPswRoot"
+            style="@style/LinearLayout_style_login"
+            android:layout_marginTop="@dimen/d_13">
+
+        <ImageView
+                style="@style/ImageView_style_login"
+                android:src="@mipmap/icon_mima"/>
+
+        <EditText
+                android:id="@+id/mEtPsw"
+                style="@style/EditText_style_login"
+                android:maxLength="20"
+                android:inputType="textPassword"
+                android:digits="@string/digits"
+                android:hint="请填写密码(6-20位)"/>
+
+    </LinearLayout>
+
+
+
+</merge>

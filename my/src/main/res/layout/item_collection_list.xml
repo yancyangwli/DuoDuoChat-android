@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:background="@drawable/bg_press_color"
+              android:layout_marginBottom="@dimen/d_10"
+              android:padding="@dimen/d_15">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/d_40"
+            android:layout_height="@dimen/d_40"
+            android:src="@mipmap/icon_default_head"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_8"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_25"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+            <TextView
+                    android:id="@+id/mTvNickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="---"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/s_17"/>
+
+            <TextView
+                    android:id="@+id/mTvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/s_12"
+                    android:text="---"
+                    android:textColor="#FF9A9A9A"/>
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/mTvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_10"
+                android:textSize="@dimen/s_14"
+                android:textColor="#FF9A9A9A"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:text="黑洞是现代广义相对论中，宇宙空间内存在的一种天体。黑洞的引力很大，使得视界内的逃逸速度大于光速。"/>
+    </LinearLayout>
+</LinearLayout>

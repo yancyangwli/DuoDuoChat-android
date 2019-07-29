@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.woniu.core.widget.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="@dimen/d_65"
+                                       android:clickable="true"
+                                       app:ios="false"
+                                       app:leftSwipe="true"
+                                       app:swipeEnable="true">
+    <LinearLayout
+            android:id="@+id/mLlBlackRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/d_15"
+            android:paddingRight="@dimen/d_15"
+            android:background="@drawable/bg_press_color"
+            android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mIvAvatar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/icon_default_head"/>
+
+        <TextView
+                android:id="@+id/mTvNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="----"
+                android:textColor="@color/contact_color_333333"
+                android:textSize="17dp"/>
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/mBtnDelete"
+            android:layout_width="@dimen/d_89"
+            android:layout_height="match_parent"
+            android:background="#FF6464"
+            android:text="移除"
+            android:textColor="@android:color/white"/>
+</com.woniu.core.widget.SwipeMenuLayout>

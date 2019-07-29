@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <item name="my_click_time" type="id"/>
+
+    <item name="my_click_back" type="id"/>
+</resources>

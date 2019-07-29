@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:id="@+id/mRootLl"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/mTvType"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_40"
+            android:text="群主、管理员(5人)"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:textSize="@dimen/s_13"
+            android:paddingLeft="@dimen/d_15"
+            android:textColor="#333"/>
+
+
+    <LinearLayout
+            android:id="@+id/mLlMember"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_60"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:background="@drawable/bg_press_color"
+            android:paddingLeft="@dimen/d_15"
+            android:paddingRight="@dimen/d_15">
+
+        <CheckBox
+                android:id="@+id/mCbSelect"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_height="wrap_content"
+                android:button="@drawable/bg_checkbox"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mIvAvatar"
+                android:layout_width="@dimen/d_48"
+                android:layout_height="@dimen/d_48"
+                android:src="@mipmap/ic_launcher_round"/>
+
+        <cn.jiguang.imui.view.RoundTextView
+                android:id="@+id/mTvFlag"
+                android:layout_width="@dimen/d_55"
+                android:layout_height="@dimen/d_20"
+                app:cornerRadius="@dimen/d_2"
+                app:backgroundColor="#FFCA24"
+                android:text="群主"
+                android:layout_marginLeft="@dimen/d_8"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s_11"
+                android:gravity="center"/>
+
+        <TextView
+                android:id="@+id/mNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小小鱼"
+                android:layout_marginLeft="@dimen/d_10"
+                android:textSize="@dimen/s_17"
+                android:textColor="#333"/>
+    </LinearLayout>
+</LinearLayout>

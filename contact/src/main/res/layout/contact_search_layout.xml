@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_36"
+            android:layout_marginTop="@dimen/d_35"
+            android:layout_marginLeft="@dimen/d_15"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/d_15">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/d_15"
+                android:paddingRight="@dimen/d_15"
+                android:background="@drawable/bg_circle_corner_gray">
+
+            <ImageView
+                    android:layout_width="@dimen/d_17"
+                    android:layout_height="@dimen/d_17"
+                    android:src="@mipmap/icon_search"/>
+
+            <EditText
+                    android:id="@+id/mEtSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:hint="搜索"
+                    android:textColorHint="#9A9A9A"
+                    android:textColor="#333"
+                    android:singleLine="true"
+                    android:maxLength="25"
+                    android:textSize="@dimen/s_14"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:imeOptions="actionSearch"/>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/mTvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="取消"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/d_17"
+                android:textSize="@dimen/s_14"
+                android:textColor="#35DAE5"/>
+    </LinearLayout>
+
+    <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/d_50"-->
+            <!--android:paddingLeft="@dimen/d_15"-->
+            <!--android:paddingRight="@dimen/d_15">-->
+
+        <!--<TextView-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="搜索历史"-->
+                <!--android:textColor="@color/contact_color_9A9A9A"-->
+                <!--android:textSize="14dp"/>-->
+
+        <!--<ImageView-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_width="16dp"-->
+                <!--android:layout_height="16dp"-->
+                <!--android:src="@mipmap/shanchu"/>-->
+    <!--</RelativeLayout>-->
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/mRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/d_20"
+            app:srlEnableRefresh="false">
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRvSearchList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"/>
+
+        <include layout="@layout/load_footer"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

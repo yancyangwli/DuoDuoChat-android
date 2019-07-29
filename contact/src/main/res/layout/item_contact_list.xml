@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#E0E0E0"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="A"
+        android:textColor="#454545" />
+
+    <LinearLayout
+            android:id="@+id/mLlInfoRoot"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_60"
+            android:clickable="true"
+            android:paddingLeft="@dimen/d_15"
+            android:paddingRight="@dimen/d_15"
+            android:background="@drawable/bg_press_color"
+            android:gravity="center_vertical">
+
+        <CheckBox
+                android:id="@+id/mCbSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/bg_checkbox"
+                android:layout_marginRight="@dimen/d_10"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mIvAvatar"
+                android:layout_width="@dimen/d_48"
+                android:layout_height="@dimen/d_48"
+                android:src="@mipmap/icon_default_head"/>
+
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="hhhh"
+                android:textColor="#336598" />
+    </LinearLayout>
+
+</LinearLayout>

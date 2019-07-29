@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/d_70"
+              android:clickable="true"
+              android:background="@drawable/bg_press_color"
+              android:paddingLeft="@dimen/d_15"
+              android:paddingRight="@dimen/d_15"
+              android:gravity="center_vertical">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mIvAvatar"
+            android:src="@mipmap/icon_default_head"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+    <TextView
+            android:id="@+id/mTvNickname"
+            android:text="After today"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/contact_color_333333"
+            android:textSize="@dimen/s_17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

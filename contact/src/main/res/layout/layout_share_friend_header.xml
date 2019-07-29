@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/LinearchLayout_press_color"
+              android:layout_marginBottom="@dimen/d_15">
+    <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/icon_share_friend"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="好友"
+            android:textColor="#333"
+            android:textSize="@dimen/s_17"/>
+</LinearLayout>
